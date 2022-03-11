@@ -5,7 +5,7 @@
  * Numbers must be separated by , followed by a new line
  * The two digits must be different
  * 012, 120, 102, are considered the same combination
- * Returmn: 0
+ * Return: 0
  */
 int main(void)
 {
