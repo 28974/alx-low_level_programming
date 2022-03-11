@@ -2,6 +2,7 @@
 
 /**
  * main - Prints a combinations
+ *        in ascending order, separated by comma followed by a space
  *
  * Return:  Always 0
  */
