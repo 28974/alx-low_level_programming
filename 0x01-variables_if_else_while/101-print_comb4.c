@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main a Prints a combinations
+ * main - Prints a combinations
  *
  * Return: 0
  */
