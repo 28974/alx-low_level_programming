@@ -1,24 +1,23 @@
-#include <unistd.h>
 #include <main.h>
 
 /**
  * main - program that prints _putchar
  *
  * _putchar print the character given
- * Return: int
+ * Return: Always 0.
  */
 
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	int n = 0;
+	char str_ptc[8] = "_putchar";
 
-	return ('0);
+	while (n < 8)
+	{
+
+		_putchar(str_ptc[n]);
+		n += 1;
+	}
+	_putchar('\n');
+		return (0);
 }
