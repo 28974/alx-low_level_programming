@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * main - program that prints _putchar
@@ -11,7 +11,7 @@ int main(void)
 {
 	char y[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	int h = 8;
-	while (y[h] != '\0')
+	for (h=8; h => 8; h++)
 	{
 	_putchar(y[]);
 
