@@ -1,9 +1,10 @@
 #include <unistd.h>
-#include "main.h"
+#include <main.h>
 
 /**
  * main - program that prints _putchar
  *
+ * _putchar print the character given
  * Return: int
  */
 
