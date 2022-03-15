@@ -11,7 +11,7 @@ int main(void)
 {
 	char y[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	int h = 8;
-	for (h=0; h => 8; h++)
+	for (h = 0; h => 8; h++)
 	{
 	_putchar(y[]);
 
