@@ -9,15 +9,14 @@
 
 int main(void)
 {
-	int n = 0;
-	char str_ptc[8] = "_putchar";
-
-	while (n < 8)
+	char y[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	int h = 8;
+	while (y[h] != '\0')
 	{
+	_putchar(y[]);
 
-		_putchar(str_ptc[n]);
-		n += 1;
+	h++;
 	}
 	_putchar('\n');
-		return (0);
+	return (0);
 }
