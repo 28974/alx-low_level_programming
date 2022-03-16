@@ -2,8 +2,8 @@
 
 /**
  * add - adds
- * @num1: the first integer
- * @num2: the second
+ * @a: the first integer
+ * @b: the second
  *
  * Return: the result in addition
  */
