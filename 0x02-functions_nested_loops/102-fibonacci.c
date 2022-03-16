@@ -8,23 +8,21 @@
  */
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 2, sum;
+	long i = 0;
+	long j = 1;
+	int n = 0;
+	long fib;
 
-	for (count = 0; count < 50; count++)
+	while (n < 50)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
-
-		if (count == 49)
-			printf("\n");
+		fib = j + i;
+		if (n != 0)
+			printf("%ld, ", fib);
 		else
-			printf(", ");
+			printf("%ld\n", fib);
+		i = j;
+		j = fib;
+		n += 1;
 	}
-
-
-		return (0);
+	return (0);
 }
