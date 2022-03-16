@@ -8,21 +8,22 @@
  */
 int main(void)
 {
-	long i = 0;
-	long j = 1;
-	int n = 0;
-	long fib;
+	unsigned long count, i, j, k;
 
-	while (n < 50)
+	i = 0;
+	j = 1;
+	for (count = 0; count < 50; count++)
 	{
-		fib = j + i;
-		if (n != 0)
-			printf("%ld, ", fib);
-		else
-			printf("%ld\n", fib);
+		k = i + j;
 		i = j;
-		j = fib;
-		n += 1;
+		j = k;
+		printf("%lu", k);
+		if (count == 49)
+			_putchar('\n');
+		else
+		{
+			printf(", ");
+		}
 	}
 	return (0);
 }
