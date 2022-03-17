@@ -8,29 +8,33 @@
 
 void print_number(int n)
 {
-	unsigned int num, num2;
-	int i;
-	int aux = 1;
+	int len, papi, i, tamporizer, exposant;
 
-	if (n < 0)
+	papi = n;
+	exposant = len = 1;
+	/*see if the number is negative*/
+	if (papi < 0)
 	{
-		n = n * -1;
+		papi *= -1;
 		_putchar('-');
 	}
-	num = n;
-	num2 = num;
-	if (num > 9)
+
+	/* yes here we are*/
+	tamporizer = papi;
+	while (tamporizer >= 10)
 	{
-		while (num >= 10)
-		{
-			aux = aux * 10;
-			num = num / 10;
-		}
-		_putchar((num2 / aux) + '0');
-			aux = aux / 10;
-			for (i = aux; i >= 1; i = i / 10)
-				_putchar((num2 / i) % 10 + '0');
+		len++;
+		tamporizer / 10;
 	}
-	else
-		_putchar(num + ;0;)'
+
+	/*exposant*/
+	for (i = 1; i < len; i++)
+		exposant *= 10;
+	/*main*/
+	while (exposant > 1)
+	{
+		_putchar((papi / exposant) % 10 + '0');
+		exposant /= 10;
+	}
+	_putchar((papi % 10 + '0');
 }
