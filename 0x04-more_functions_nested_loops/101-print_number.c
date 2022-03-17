@@ -3,7 +3,6 @@
 /**
  * print_number - function that print
  * @n: input value
- * Return: nothing
  */
 
 void print_number(int n)
@@ -24,17 +23,17 @@ void print_number(int n)
 	while (tamporizer >= 10)
 	{
 		len++;
-		tamporizer / 10;
+		tamporizer /= 10;
 	}
 
 	/*exposant*/
 	for (i = 1; i < len; i++)
 		exposant *= 10;
-	/*main*/
+	/*main */
 	while (exposant > 1)
 	{
 		_putchar((papi / exposant) % 10 + '0');
 		exposant /= 10;
 	}
-	_putchar((papi % 10 + '0');
+	_putchar(papi % 10 + '0');
 }
