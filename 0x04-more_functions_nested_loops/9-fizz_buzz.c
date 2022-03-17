@@ -4,26 +4,28 @@
  * main - program
  * But for multuples
  * and for the multiples
+ * when there are multiples
+ *
  * Return: 0
  */
 
 int main(void)
 {
-	int num;
+	int i;
 
-	for (num = 1; num <= 100; num++)
+	for (i = 1; i <= 100; i++)
 	{
-		if (num % 3 == 0 && num % 5 == 0)
-			printf("FizzBuzz ");
-		else if (num % 3 ==0 && num % 5 != 0)
-			printf("Fizz ");
-		else if (num == 100)
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
 			printf("Buzz");
-		else if (num % 5 == 0 && num % 3 != 0)
-			printf("Buzz ");
 		else
-			printf("%d ", num);
+			printf("%d", i);
+		if (i != 100)
+			putchar(' ');
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
