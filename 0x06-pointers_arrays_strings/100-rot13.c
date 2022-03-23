@@ -19,7 +19,7 @@ char *rot13(char *s)
 		{
 			if (*(s + i) == *(l + j))
 			{
-				*(s + i) = *(rot13 + j);
+				*(s + i) = *(r13 + j);
 				break;
 			}
 			j++;
@@ -29,5 +29,3 @@ char *rot13(char *s)
 	}
 	return (s);
 }
-
-
