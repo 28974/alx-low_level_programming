@@ -9,8 +9,8 @@
  * Return: nothing
  */
 
-void reverse_array(int *a. int n)
-{
+void reverse_array(int *a, int n)
+
 	int i = 0;
 	int j = 0;
 	int *init, *final;
