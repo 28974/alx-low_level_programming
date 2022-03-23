@@ -1,8 +1,8 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * *_strcat - function that concatenated two strings
+ * _strcat - function that concatenated two strings
  * @dest: destination strng
  * @src: source string
  *
