@@ -2,11 +2,9 @@
 
  /**
   * _strncat - concatenates two strings using at most
-  *            an inputted number of bytes from src
   * @dest: The string to be appended upon
   * @src: The print to be appended to dest.
   * @n: the number of bytes
-  *
   * Return: A pointer to the resulting string dest
   */
 
