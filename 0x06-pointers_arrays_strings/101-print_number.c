@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print-number - Prints any integer with putchar
+ * print-number - Prints any integer
  * @n: Number to print
  *
  * Return : Nothing
@@ -19,5 +19,5 @@ void print_number(int n)
 	 if ((num / 10) > 0)
 		 print_number(num / 10);
 
-	 _putchar(num % 10 + '0');
+	 _putchar((num % 10) + '0');
 }
