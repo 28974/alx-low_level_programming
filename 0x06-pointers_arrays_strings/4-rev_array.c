@@ -10,11 +10,11 @@
  */
 
 void reverse_array(int *a, int n)
-
+{
 	int i = 0;
 	int j = 0;
 	int *init, *final;
-	int aux;
+	int aux = 0;
 
 	init = a;
 	final = a;
