@@ -29,7 +29,7 @@ void print_number(int n)
 	/*Main*/
 	while (exposant >= 1)
 	{
-		_putchar (((nani / exposant) % 10) * -1 + '0');
+		_putchar(((nani / exposant) % 10) * -1 + '0');
 		exposant /= 10;
 	}
 }
