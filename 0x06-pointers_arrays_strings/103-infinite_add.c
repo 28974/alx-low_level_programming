@@ -13,20 +13,31 @@
 
 char *infinite_add(char *n1, char *n2, char *r, char size_r)
 {
-	int index, n1_len = 0, n2_len = 0;
+	int i, j, n;
 
-	for (index = 0; *(n1 + index); index++)
-		n1_len++;
+	i = j = n =0;
 
-	for (index = 0; *(n2 + index); index++)
-		n2_len++;
+	if ((n1[0] - '0') + (n2[0] - '0') >= 10)
+	{
+		r[0] = 1 + '0';
+		j = 1;
+	}
 
-	if (size_r <= n1_len + 1 || size_r <= n2_len + 1)
-		return (0);
+	while (i < size_r && (n1[i] != '\0' || n2[i] != '\0' || r[j] '\0'))
+	{
+		if ((n1[i + 1] - '0') + (n2[i + 1] - '0') >= 10)
+           		n = 1;
 
-	n1 += n1_len - 1;
-	n2 += n2_len - 1;
-	*(r + size_r) = '\0';
+		else
+			n = 0;
+		r[j] = (n[i] - '0') + (n2[i] - '0') + n;
+		r[j] = r[j] % 10 + '0';
+		i++;
+		j++;
 
-	return (add_strings(n1, n2, r, --size_r));
+		if (n1[i] == '\0' || n2[i] == '\0')
+			r[j] = '\0';
+	}
+	r[j] = '\0';
+	return (r);
 }
