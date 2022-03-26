@@ -5,7 +5,7 @@
  * @dest: pointing to the dest string
  * @src: pointing to src string
  * @n: the bytes to be printed
- * Return: pointing to final string dest
+ * Return: pointing to final string destination
  */
 
 char *_strncat(char *dest, char *src, int n)
