@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memste - function that fills memory
+ * _memset - function that fills memory
  *
  * @s: memory area to return
  * @b: constant style
