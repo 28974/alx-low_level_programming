@@ -6,7 +6,7 @@
  * @accept: unput
  * Return: always 0
  */
-unsigned int_strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i, n, value, check;
 
