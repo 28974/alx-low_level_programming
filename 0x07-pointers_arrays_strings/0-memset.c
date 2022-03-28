@@ -6,18 +6,18 @@
  * @s: memory area to return
  * @b: constant style
  * @n: size of bytes
- *
  * Return: char
  */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int a;
+	unsigned int i = 0;
 
-	for (a = 0; a < n; n++)
+	while (i < n)
 	{
-		s[a] = b;
-	}
 
+		*(s + i) = b;
+		i += 1;
+	}
 	return (s);
 }
