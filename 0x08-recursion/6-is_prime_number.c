@@ -9,7 +9,7 @@
 
 int is_prime_number(int n)
 {
-	if ( <= 1)
+	if (n <= 1)
 		return (0);
 	return (getNumPrim(n, 2));
 }
@@ -21,7 +21,7 @@ int is_prime_number(int n)
  * Return: int
  */
 
-int getNumPrim(int n, int i)
+int getNumPrim(int num, int i)
 {
 	if (num == i)
 		return (1);
