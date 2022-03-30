@@ -8,7 +8,7 @@
  * Return: int
  */
 
-int _strlen_recursion(char *s0)
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 		return (0);
@@ -29,7 +29,7 @@ int get_pal(char *s, int len)
 		return (0);
 	else if (*s == '\0')
 		return (1);
-	return (get_pal(s + 1, len - 2))
+	return (get_pal(s + 1, len - 2));
 }
 
 /**
