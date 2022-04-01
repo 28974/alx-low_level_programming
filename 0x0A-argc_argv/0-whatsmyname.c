@@ -11,8 +11,14 @@
 
 int main(int argc, char *argv[])
 {
-	argc = 0;
+	int count;
 
-	printf("%s\n", argv[argc]);
+	for (count = 0; count < argc; count++)
+	{
+		if (argc == 1)
+			printf("%s\n", argv[count]);
+		else
+			break;
+	}
 	return (0);
 }
