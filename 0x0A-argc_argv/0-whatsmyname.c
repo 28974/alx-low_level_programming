@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - program that prints its name
@@ -9,16 +10,9 @@
  * Return: int
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int count;
-
-	for (count = 0; count < argc; count++)
-	{
-		if (argc == 1)
-			printf("%s\n", argv[count]);
-		else
-			break;
-	}
+	if (argc >= 1)
+		printf("%s\n", argv[0]);
 	return (0);
 }
