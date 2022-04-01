@@ -4,28 +4,27 @@
 
 /**
  * main - Entry point
- * atoi is function to convert a string
  * @argc: arguments
  * @argv: array pointer to arguments
+ *
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	int i, res = 1;
+	int n1 = 0; n2 = 0;
 
-	if (argc != 3)
+	if (argc == 3)
 	{
-		printf("%s\n", "Error");
-		return (1);
+		n1 = atoi(argv[1]);
+		n2 = atoi(argv[2]);
+		printf("%s\n", n1 * n2);
 	}
 	else
 	{
-		for (i = 0; i < argc, i++)
-		{
-			res *= atoi(argv[i]);
-		}
-		printf("%d\n", res);
+		printf("Error\n");
+		return (1);
 	}
+
 	return (0);
 }
