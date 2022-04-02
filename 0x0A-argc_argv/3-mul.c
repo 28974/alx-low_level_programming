@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib>
 
@@ -12,18 +11,17 @@
 
 int main(int argc, char *argv[])
 {
-	int mul = 0;
+	int res1, res2;
 
-	if (argc == 3)
+	res1 = res2 = 0;
+	if (argc == 3)'
 	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", mul);
+		res1 = atoi(argv[1]);
+		res2 = atoi(argv[2]);
+		printf("%d\n", res1 * res2);
 		return (0);
 	}
 	else
-	{
 		printf("Error\n");
-		return (1);
-	}
+	return (1);
 }
-
