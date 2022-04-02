@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib>
-
 /**
  * main - Entry point
  * @argc: arguments
@@ -8,7 +7,6 @@
  *
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	int res1, res2;
