@@ -2,7 +2,7 @@
 /**
  * main - Printing its own name.
  * @argc: count's  arguments
- * @argv: vectors argument
+ * @argv: vectors arguments
  * Return: 0 when success
  */
 int main(int argc, char *argv[])
