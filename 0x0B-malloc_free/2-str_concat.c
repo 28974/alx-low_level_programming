@@ -1,33 +1,53 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
- * _strdup - duplicates a string into newly allocated array
- *
- * @str: string to duplicate
- *
- * Return: pointer to new string
- */
-char *_strdup(char *str)
+  * str_concat - Concatenates two strings of any size
+  * @s1: the first string to concatenate
+  * @s2: the second string to concatenate
+  *
+  * Return: the two strings concatenated
+  */
+char *str_concat(char *s1, char *s2)
 {
-	int size = 0;
-	char *ptr, *ret;
+	int i = 0, j = 0, k = 0, l = 0;
+	char *s;
 
-	if (!str)
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	while (s1[i])
+		i++;
+
+	while (s2[j])
+		j++;
+
+	l = i + j;
+	s = malloc((sizeof(char) * l) + 1);
+
+	if (s == NULL)
 		return (NULL);
 
-	ptr = str;
-	while (*ptr++)
-		size++;
+	j = 0;
 
-	ret = malloc(size + 1);
-	if (!ret)
-		return (NULL);
+	while (k < l)
+	{
+		if (k <= i)
+			s[k] = s1[k];
 
-	ptr = ret;
-	while (*str)
-		*ptr++ = *str++;
+		if (k >= i)
+		{
+			s[k] = s2[j];
+			j++;
+		}
 
-	*ptr = 0;
-	return (ret);
+		k++;
+	}
+
+	s[k] = '\0';
+	return (s);
 }
