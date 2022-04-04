@@ -1,15 +1,13 @@
 #include <stdio.h>
 /**
- * main - program that prints its name
- * @argc: argument count
- * @argv: argument vector
- *
- * Return: int
+ * main - Printing its own name.
+ * @argc: count's  argument
+ * @argv: vectors argument
+ * Return: 0 when success
  */
 int main(int argc, char *argv[])
 {
-	argc = 0;
-
-	printf("%d\n", argv[argc]);
+	argc--;
+	printf("%s\n", argv[0]);
 	return (0);
 }

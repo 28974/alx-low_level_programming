@@ -1,19 +1,13 @@
-#include "main.h"
 #include <stdio.h>
 /**
- * main - Entry point
- * @argc: argument
- * @argv: pointing to arguments
- * Return: 0
+ * main -output all  arguments passed to the function.
+ * @argc: count's argument
+ * @argv: vector's argument
+ * Return: 0 when success
  */
-
-int main(int argc, __attribute__((unused)) char *argv[])
+int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	{
-	}
-	printf("%d\n", i - 1);
+	printf("%d\n", argc - 1);
+	argv[0] = 0;
 	return (0);
 }
