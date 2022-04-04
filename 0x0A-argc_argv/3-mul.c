@@ -1,18 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Entry point
- * @argc: arguments
- * @argv: array pointer to arguments
- *
- * Return: 0
+ * main - multiplicating  numbers and give result
+ * @argc: argument count must be exactly two numbers
+ * @argv: argument vector
+ * Return: 0 when success, 1 when failure
  */
 int main(int argc, char *argv[])
 {
 	int res1, res2;
 
 	res1 = res2 = 0;
-	if (argc == 3)'
+	if (argc == 3)
 	{
 		res1 = atoi(argv[1]);
 		res2 = atoi(argv[2]);
