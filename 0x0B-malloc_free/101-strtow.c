@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * wordcounter - counts words and the alphabet in them
+ * wordcounter - count words and the alphabet in them
  * @str: string to count
  * @pos: position of the word to count characters from
  * @firstchar: position of the first letter of the word
