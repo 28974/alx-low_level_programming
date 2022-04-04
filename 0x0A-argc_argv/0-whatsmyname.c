@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Printing its own name.
- * @argc: count's  argument
+ * @argc: count's  arguments
  * @argv: vectors argument
  * Return: 0 when success
  */
