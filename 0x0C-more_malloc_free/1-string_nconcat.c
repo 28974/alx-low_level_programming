@@ -1,47 +1,52 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "holberton.h"
+#include <stdlib.h>
+
 /**
- * string_nconcat - concatenates 2 strings into a new string,
- * taking the first n from string 2. If n>strlen(s2),
- * use whole string s2.
- *
- * @s1: first string
- * @s2: second string
- * @n: number of characters to take from second string
- *
- * Return: new string, or null on failure
- */
+  * string_nconcat - ...
+  * @s1: ...
+  * @s2: ...
+  * @n: ...
+  *
+  * Return: ...
+  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, i;
-	char *ptr, *ret;
+	unsigned int i = 0, j = 0, k = 0, l = 0;
+	char *str;
 
-	if (!s1)
+	if (s1 == NULL)
 		s1 = "";
-	if (!s2)
+	if (s2 == NULL)
 		s2 = "";
 
-	for (len1 = 0, ptr = s1; *ptr; ptr++)
-		len1++;
-	for (len2 = 0, ptr = s2; *ptr; ptr++)
-		len2++;
-	if (n > len2)
-		n = len2;
+	while (s1[i])
+		i++;
 
-	ret = malloc((len1 + n + 1) * sizeof(char));
-	if (!ret)
-		return (0);
+	while (s2[k])
+		k++;
 
-	ptr = ret;
-	while (*s1)
-		*ptr++ = *s1++;
-	i = 0;
-	while (i < n)
+	if (n >= k)
+		l = i + k;
+	else
+		l = i + n;
+
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
+		return (NULL);
+
+	k = 0;
+	while (j < l)
 	{
-		*ptr++ = s2[i++];
-	}
-	*ptr = 0;
+		if (j <= i)
+			str[j] = s1[j];
 
-	return (ret);
+		if (j >= i)
+		{
+			str[j] = s2[k];
+			k++;
+		}
+		j++;
+	}
+	str[j] = '\0';
+	return (str);
 }
