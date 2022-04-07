@@ -3,19 +3,18 @@
 #include <stdio.h>
 
 /**
-  * malloc_checked - Allocates memory
-  * @b: the size to allocate
-  *
-  * Return: Nothing.
-  */
+ * malloc_checked - function that allocates memory using malloc
+ * @b: sizeof int
+ * Return: nothing
+ */
+
 void *malloc_checked(unsigned int b)
 {
-	void *p;
+	void *al;
 
-	p = malloc(b);
-
-	if (p == NULL)
+	al = malloc(b);
+	if (al == NULL)
 		exit(98);
-
-	return (p);
+	else
+		return (al);
 }
