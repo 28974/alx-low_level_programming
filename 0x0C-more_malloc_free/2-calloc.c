@@ -1,21 +1,32 @@
+#include "holberton.h"
 #include <stdlib.h>
+
 /**
-  * _calloc - allocating memory to initialized buffer
-  * @nmemb: number of memory bytes
-  * @size: number of data type bits
-  * Return: returning pointer to initialized buffer
+  * _calloc - ...
+  * @nmemb: number of members
+  * @size: size
+  *
+  * Return: ...
   */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *p;
-	unsigned int i;
+	int i = 0, l = 0;
+	char *p;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	p = malloc(size * nmemb);
+
+	l = nmemb * size;
+	p = malloc(l);
+
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < nmemb ; i++)
+
+	while (i < l)
+	{
 		p[i] = 0;
+		i++;
+	}
+
 	return (p);
 }
