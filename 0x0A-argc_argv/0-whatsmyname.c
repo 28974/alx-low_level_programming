@@ -1,13 +1,15 @@
 #include <stdio.h>
+
 /**
- * main - Printing its own name.
- * @argc: count's  argument
- * @argv: vectors argument
- * Return: 0 when success
+ * main - Prints the program name, followed by a new line.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: Always o.
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	argc--; /*added to pass checks*/
 	printf("%s\n", argv[0]);
+
 	return (0);
 }
