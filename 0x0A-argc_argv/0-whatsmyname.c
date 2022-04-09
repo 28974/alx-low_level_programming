@@ -1,15 +1,24 @@
+#include "holberton.h"
 #include <stdio.h>
 
 /**
- * main - Prints the program name, followed by a new line.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * main - program that prints its name
+ * @argc: argument count
+ * @argv: argunment vector
  *
- * Return: Always o.
+ * Return: int
  */
-int main(int __attribute__((__unused__)) argc, char *argv[])
-{
-	printf("%s\n", argv[0]);
 
+int main(int argc, char *argv[])
+{
+	int count;
+
+	for (count = 0; count < argc; count++)
+	{
+		if (argc == 1)
+			printf("%s\n", argv[count]);
+		else
+			break;
+	}
 	return (0);
 }
