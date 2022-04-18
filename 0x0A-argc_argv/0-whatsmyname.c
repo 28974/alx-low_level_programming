@@ -1,13 +1,41 @@
+#include "holberton.h"
 #include <stdio.h>
+
+void print_string(char *str);
+
 /**
- * main - Printing its own name.
- * @argc: count's  argument
- * @argv: vectors argument
- * Return: 0 when success
+ * main - Prints its name
+ *
+ * @argc: Length of argv
+ *
+ * @argv: Arrays of strings of the program arguments
+ *
+ * Return: 0, Success
  */
-int main(int argc, char *argv[])
+
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	argc--; /*added to pass checks*/
-	printf("%s\n", argv[0]);
+	print_string(argv[0]);
+	putchar('\n');
+
 	return (0);
+}
+
+/**
+ * print_string - Prints all char of a string
+ *
+ * @str: Pointer to string
+ *
+ * Return: void
+ */
+
+void print_string(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		putchar(str[i]);
+		i++;
+	}
 }
