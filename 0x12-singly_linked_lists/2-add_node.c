@@ -1,51 +1,48 @@
-#include <stdlib.h>
-#include <string.h>
 #include "lists.h"
-
+#include <stdlib.h>
 /**
-  * add_node - Adds a new node at the beginning of a list
-  * @head: The original linked list
-  * @str: The string to add to the node
-  *
-  * Return: The address of the new list or NULL if it failed
-  */
-list_t *add_node(list_t **head, const char *str)
-{
-	list_t *temp;
-
-	if (head != NULL && str != NULL)
-	{
-		temp = malloc(sizeof(list_t));
-		if (temp == NULL)
-			return (NULL);
-
-		temp->str = strdup(str);
-		temp->len = _strlen(str);
-		temp->next = *head;
-
-		*head = temp;
-
-		return (temp);
-	}
-
-	return (0);
-}
-
-/**
-  * _strlen - Returns the length of a string
-  * @s: String to count
-  *
-  * Return: String length
+  * _strlen - takes length of the string
+  * @s: string
+  * Return: return the length of the string
   */
 int _strlen(const char *s)
 {
-	int c = 0;
+	int p;
 
-	while (*s)
+	for (p = 0; s[p]; p++)
+		;
+	return (p);
+}
+/**
+  * add_node - adding new nodes to the list
+  * @head: actual place in the list
+  * @str: string to add to the head
+  * Return: pointer to current position in list
+  */
+list_t *add_node(list_t **head, const char *str)
+{
+	int k, len;
+	char *content;
+	list_t *new;
+
+	if (str == NULL || head == NULL)
+		return (NULL);
+	len = _strlen(str);
+	new = *head;
+	content = malloc((len + 1) * sizeof(char));
+	if (content == NULL)
+		return (NULL);
+	for (k = 0; str[k]; k++)
+		content[k] = str[k];
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 	{
-		s++;
-		c++;
+		free(content);
+		return (NULL);
 	}
-
-	return (c);
+	new->str = content;
+	new->len = len;
+	new->next = *head;
+	*head = new;
+	return (new);
 }
