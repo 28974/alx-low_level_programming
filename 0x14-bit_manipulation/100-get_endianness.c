@@ -1,26 +1,16 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * flip_bits - number of different bits between two numbers
- * @n: first number
- * @m: second number
+ * get_endianness - checks the endianness
  *
- * Return: number of bits you would need to flip
- * to get from one number to another.
+ * Return: 0 if big endian, 1 if little endian
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int get_endianness(void)
 {
-	unsigned long int diff, check;
-	unsigned int count, i;
+	int x;
+	char *y;
 
-	count = 0;
-	check = 1;
-	diff = n ^ m;
-	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
-	{
-		if (check == (diff & check))
-			count++;
-		check <<= 1;
-	}
-	return (count);
+	x = 1;
+	y = (char *)&x;
+	return (*y);
 }
