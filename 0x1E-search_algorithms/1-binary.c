@@ -1,58 +1,55 @@
 #include "search_algos.h"
 
-int recurse_helper(int *array, size_t left, size_t right, int value);
-
 /**
- * binary_search - search for value in array of sorted ints
- * @array: array to search
+ * print_array - prints an array of integers
+ * @array: array to print
  * @size: size of array
- * @value: value to search
  *
- * Return: index of found value; or -1 if not found
+ * return: void
  */
-int binary_search(int *array, size_t size, int value)
+void print_array(int *array, size_t size)
 {
-	if (array == NULL)
-		return (-1);
+	size_t i;
 
-	return (recurse_helper(array, 0, size - 1, value));
+	printf("Searching in array:");
+	for (i = 0; i < size; i++)
+	{
+		printf(" %d", array[i]);
+		if (i != size - 1)
+			printf(",");
+	}
+	printf("\n");
 }
 
 /**
- * recurse_helper - recursive implement of binary search
- * @array: array to search
- * @left: leftmost index
- * @right: rightmost index
- * @value: value to search
+ * binary_search - searches for a value in a sorted array of integers using the
+ * Binary search algorithm
+ * @array: pointer to the first element of the array to search in
+ * @size: number of elements in array
+ * @value: value to search for
  *
- * Return: index of found value; or -1 if not found
+ * Return: index where value is located, or -1 on failure
  */
-int recurse_helper(int *array, size_t left, size_t right, int value)
+int binary_search(int *array, size_t size, int value)
 {
-	size_t i = left, mid;
+	size_t l, m, r;
 
-	if (left > right)
-		return (-1);
-
-	/* print search progress */
-	printf("Searching in array: %d", array[i++]);
-	while (i <= right)
-		printf(", %d", array[i++]);
-	printf("\n");
-
-	/* calculate mid */
-	mid = left + ((right - left) / 2);
-
-	/* check if mid is value */
-	if (array[mid] == value)
-		return (mid);
-	else if (array[mid] > value)
+	if (array != NULL && size > 0)
 	{
-		if (mid != 0)
-			return (recurse_helper(array, left, mid - 1, value));
-		else
-			return (-1);
+		l = 0;
+		r = size - 1;
+		print_array(array + l, r + 1 - l);
+		while (l < r)
+		{
+			m = (l + r) / 2;
+			if (array[m] < value)
+				l = m + 1;
+			else if (array[m] > value)
+				r = m;
+			else
+				return (m);
+			print_array(array + l, r + 1 - l);
+		}
 	}
-	else
-		return (recurse_helper(array, mid + 1, right, value));
+	return (-1);
 }
